@@ -17,6 +17,12 @@ class ListsController < ApplicationController
     end
   end
 
+  def show 
+    @list = List.find(params[:id])
+    @tasks = @list.tasks.reverse
+    @task = Task.new
+  end
+
   def destroy
     @list = List.find(params[:id])
     @list.destroy

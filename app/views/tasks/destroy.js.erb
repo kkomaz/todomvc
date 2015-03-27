@@ -1,0 +1,5 @@
+var $element = $("li[data-task-id=" + <%= @task.id %> + "]")
+
+$element.slideUp(400, function(){
+  $element.remove();
+})

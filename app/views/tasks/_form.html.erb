@@ -1,0 +1,6 @@
+<div id="task-form">
+  <%= form_for [@list, @task], :remote => true do |f|%>
+    <%= f.text_field :description, :id => "new-todo", :placeholder => "What needs to be done?", :autofocus => true %>
+    <%= f.submit :class => "listButtonSubmit"  %>
+  <%- end -%>
+</div>

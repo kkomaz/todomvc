@@ -1,0 +1,2 @@
+$("input#new-todo").val("");
+$("<%= j(render @task) %>").prependTo($("ul#todo-list")).hide().slideDown(400);

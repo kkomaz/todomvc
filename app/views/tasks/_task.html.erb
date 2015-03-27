@@ -1,0 +1,12 @@
+<li data-task-id="<%= task.id %>">
+  <div class="view">
+    <%= form_for [task.list, task], :remote => true do |f| %>
+      <%= f.check_box :status, :class => "toggle"%>
+    <% end %>
+
+    <label><%= task.description %></label>
+    <%= link_to [task.list,task], :method => :delete, :remote => true do %>
+      <button class="destroy">X</button>
+    <%- end -%>
+  </div>
+</li>

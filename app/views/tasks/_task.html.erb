@@ -9,4 +9,8 @@
       <button class="destroy">X</button>
     <%- end -%>
   </div>
+  <%= form_for [task.list, task], html: {:class => "edit_description"}, :remote => true do |f| %>
+    <%= f.text_field :description, :class => "edit"%>
+    <%= f.submit :style => "display: none" %>
+  <% end %>
 <% end %>
